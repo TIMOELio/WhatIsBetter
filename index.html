@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>What Is Better?</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+            img {
+                margin: 10px;
+            }
+        </style>
+        <script>
+            function img1() {
+                window.location.reload(false); 
+            }
+            function img2() {
+                window.location.reload(false); 
+            }
+        </script>
+    </head>
+    <body>
+        <h1>What Is Better?</h1>
+        <p>Click on the better object</p>
+        <script>
+            max = 8;
+            min = 1;
+            rand1 = Math.floor(Math.random() * (max - min + 1) ) + min;
+            rand2 = Math.floor(Math.random() * (max - min + 1) ) + min;
+            if(rand1==rand2) {
+                if(rand1<10) {
+                    rand1++;
+                } else {
+                    rand1--;
+                }
+            }
+            document.write('<p>' + rand1 + ' ' + rand2 + '<p>');
+            document.write('<img onclick="img1();" src="img/' + rand1 + '.png" width="300px" height="300px"></a>');
+            document.write('<img onclick="img2();" src="img/' + rand2 + '.png" width="300px" height="300px"></a>');
+        </script>
+    </body>
+</html>
