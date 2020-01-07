@@ -11,34 +11,31 @@
             img {
                 margin: 10px;
             }
+            img:hover {
+                border: black 2px dashed;
+            }
         </style>
         <script>
-            function img1() {
-                window.location.reload(false); 
-            }
-            function img2() {
-                window.location.reload(false); 
-            }
+            
         </script>
     </head>
     <body>
+        <!-- Firebase stuff -->
+        <!-- The core Firebase JS SDK -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+        <!-- Firebase App -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <!-- Import Firestore -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+
+
         <h1>What Is Better?</h1>
         <p>Click on the better object</p>
-        <script>
-            max = 16;
-            min = 1;
-            rand1 = Math.floor(Math.random() * (max - min + 1) ) + min;
-            rand2 = Math.floor(Math.random() * (max - min + 1) ) + min;
-            if(rand1==rand2) {
-                if(rand1<10) {
-                    rand1++;
-                } else {
-                    rand1--;
-                }
-            }
-            document.write('<p>' + rand1 + ' ' + rand2 + '<p>');
-            document.write('<img onclick="img1();" src="img/' + rand1 + '.png" width="300px" height="300px"></a>');
-            document.write('<img onclick="img2();" src="img/' + rand2 + '.png" width="300px" height="300px"></a>');
-        </script>
+        <script src="./main.js"></script>
+        
+        
     </body>
 </html>
